@@ -37,12 +37,13 @@ Usage: slackin [options] <slack-subdomain> <api-token>
 
 Options:
 
-  -h, --help               output usage information
-  -V, --version            output the version number
-  -p, --port <port>        Port to listen on [$PORT or 3000]
-  -c, --channels [<chan>]  One or more comma-separated channel names to allow single-channel guests [$SLACK_CHANNELS]
-  -i, --interval <int>     How frequently (ms) to poll Slack [$SLACK_INTERVAL or 1000]
-  -s, --silent             Do not print out warns or errors
+  -h, --help                 output usage information
+  -V, --version              output the version number
+  -p, --port <port>          Port to listen on [$PORT or 3000]
+  -c, --channels [<chan>]    One or more comma-separated channel names to allow single-channel guests [$SLACK_CHANNELS]
+  -i, --interval <int>       How frequently (ms) to poll Slack [$SLACK_INTERVAL or 1000]
+  -s, --silent               Do not print out warns or errors
+  -t, --codeofconduct <url>  URL to a code of conduct users must agree to [$SLACK_CODEOFCONDUCT]
 ```
 
 **Important: if you use Slackin in single-channel mode, you'll only be
@@ -106,8 +107,8 @@ By default logging is enabled.
 
 ## Developing
 
-Slackin's server side code is written in ES6. It uses babel to transpile the 
-ES6 code to a format node understands. After cloning Slackin, you should 
+Slackin's server side code is written in ES6. It uses babel to transpile the
+ES6 code to a format node understands. After cloning Slackin, you should
 install the prerequisite node libraries with npm:
 
 ```bash
@@ -115,7 +116,7 @@ $ npm install
 ```
 
 After the libraries install, the postinstall script will run make to invoke
-babel on the source. It is important to run make manually after updating any 
+babel on the source. It is important to run make manually after updating any
 files in lib/ to update the versions in node/.
 
 ## Credits
